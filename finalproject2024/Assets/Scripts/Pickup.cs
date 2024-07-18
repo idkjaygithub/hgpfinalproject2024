@@ -12,14 +12,19 @@ public class Pickup : MonoBehaviour
 
     public int pointValue = 1; // A variable to store how many points this pickup is worth
 
+    private bool pickedUp = false;
+
     // This function is called whenever this collider collides with another marked as a trigger (this object can be the trigger)
     private void OnTriggerEnter (Collider other)
     {
+        if (pickedUp) return; // We do not want to do anything if this pickup is already collected by the player
+
         if (other.gameObject.CompareTag("Player")) // if the collider this pickup just hit has the tag "Player"
         {
-            Destroy(this.gameObject); // destroy this pickup
+            AudioManager.Instance.PlaySound("Collect Money"); // Play this sound when collected
             GameManager.Instance.UpdateScore(pointValue); // tell the GameManager to update the score by 1
             GameManager.Instance.totalPickups -= 1; // tell the game manager to subtract from the total # of pickups
+            Destroy(this.gameObject); // destroy this pickup
         }
     }
 

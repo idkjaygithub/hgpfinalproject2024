@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
 
+    public TextMeshProUGUI objectiveText;
+
     public int score = 0; // A var to track the player's current points
 
     public GameObject pickupParent; // A var to hold the pickup parent game object; this is used to count our pickups // Assign in editor
@@ -54,20 +56,27 @@ public class GameManager : MonoBehaviour
 
         if(totalPickups <=0) // If there are no more pickups in the level...
         {
+
             WinGame(); // win the game
         }
+    }
+
+    public void UpdateObjectiveText()
+    {
+        objectiveText.text = "Objective: ✅";
     }
 
     public void UpdateScoreText()
     {
         // string // int
         scoreText.text = "Score: " + score.ToString(); 
-        // updates the score text from the player's score
+        // updates the score text from the player's score    
     }
 
     public void WinGame()
     {
         victoryText.SetActive(true); // enable our victory text
+        UpdateObjectiveText();
         GameOver();
     }
 
@@ -81,11 +90,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void LoseGame
+    public void LoseGame()
     {
-        if{player.heath <= 0;}
+        if(player.health <= 0);
         {
             GameOver();
         }
     }
+
 }

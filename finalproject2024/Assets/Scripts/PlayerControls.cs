@@ -13,6 +13,8 @@ public class PlayerControls : MonoBehaviour
 
     public float jumpForce = 5f; // Jump force
 
+    public int health;
+
     public LayerMask groundLayer; // Layer to check if the player is grounded
     private bool isGrounded; // Whether the player is or isn't grounded
     public float groundCheckDist = 1.0f; // Check if grounded by distance
@@ -20,9 +22,13 @@ public class PlayerControls : MonoBehaviour
     public float gravity = -9.81f; // Gravity constant value
     public float gravityScale = 3f; // Adjust the gravity scale as needed
     private Vector3 velocity; // Player's current velocity
+
+    private EnemyFollow enemy;
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        enemy = FindObjectOfType<EnemyFollow>();
     }
 
     // Update is called once per frame

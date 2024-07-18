@@ -12,7 +12,7 @@ public class CameraControls : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         posOffset = transform.position - target.transform.position; // Calculate the distance between the target and the camera

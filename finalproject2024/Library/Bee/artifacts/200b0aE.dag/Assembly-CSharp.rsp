@@ -355,12 +355,20 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.28f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Imports/Free Wood Door Pack/Script/CameraOpenDoor.cs"
+"Assets/Imports/Free Wood Door Pack/Script/Door.cs"
+"Assets/Imports/Free Wood Door Pack/Script/FPSController.cs"
+"Assets/Scripts/AudioManager.cs"
 "Assets/Scripts/CameraControls.cs"
-"Assets/Scripts/Enemy.cs"
+"Assets/Scripts/CellOpen.cs"
+"Assets/Scripts/EnemyFollow.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MouseFollow.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/Pickup.cs"
 "Assets/Scripts/PlayerControls.cs"
+"Assets/Scripts/Sound.cs"
 -langversion:9.0
 /deterministic
 /optimize+
