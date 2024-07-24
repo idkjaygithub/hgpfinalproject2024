@@ -385,7 +385,6 @@
 "Assets/Scripts/Gun.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MouseFollow.cs"
-"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/Pickup.cs"
 "Assets/Scripts/PlayerControls.cs"
 "Assets/Scripts/Sound.cs"

@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject victoryText; // a var to hold victory text
 
+    public GameObject loseText;
+
     private void Awake()
     {
         if (Instance == null) // If there is no other copy of this script in the scene...
@@ -41,6 +43,7 @@ public class GameManager : MonoBehaviour
         UpdateScoreText();
 
         victoryText.SetActive(false);
+        loseText.SetActive(false);
 
         totalPickups = pickupParent.transform.childCount; // Disabled the victory text when the game starts
 
@@ -76,12 +79,17 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Invoke("LoadMainMenu", 2f);
+        Invoke("LoadCurrentLevel", 2f);
     }
 
-    private void LoadMainMenu()
+    private void LoadCurrentLevel()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
+    }
+
+    public void UpdateLoseText()
+    {
+        loseText.SetActive(true);
     }
 
     public void LoseGame()

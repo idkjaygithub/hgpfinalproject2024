@@ -34,6 +34,7 @@ public class EnemyFollow : MonoBehaviour
             // Despawn the player and tell the GameManager to reset the current level
             Destroy(other.gameObject);
             GameManager.Instance.GameOver();
+            GameManager.Instance.UpdateLoseText();
         }
     }
 
