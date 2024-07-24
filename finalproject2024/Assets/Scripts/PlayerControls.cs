@@ -44,6 +44,11 @@ public class PlayerControls : MonoBehaviour
         
         controller.Move(movement *moveSpeed* Time.deltaTime); // Move the player based on the input
 
+        if (Input.GetKeyDown(KeyCode.R) && isGrounded)
+        {
+            controller.Move(movement *moveSpeed* Time.deltaTime * 2);
+        }
+
         ApplyGravity(); // Apply gravity to the player
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)

@@ -53,12 +53,6 @@ public class GameManager : MonoBehaviour
         // Increase the score variable by amount given
         score = score + amount;
         UpdateScoreText();
-
-        if(totalPickups <=0) // If there are no more pickups in the level...
-        {
-
-            WinGame(); // win the game
-        }
     }
 
     public void UpdateObjectiveText()
@@ -69,7 +63,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScoreText()
     {
         // string // int
-        scoreText.text = "Score: " + score.ToString(); 
+        scoreText.text = "Money: $" + score.ToString(); 
         // updates the score text from the player's score    
     }
 
