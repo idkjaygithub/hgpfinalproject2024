@@ -390,6 +390,7 @@
 "Assets/Scripts/PlayerControls.cs"
 "Assets/Scripts/Sound.cs"
 "Assets/Scripts/StatuePickup.cs"
+"Assets/Scripts/WinGame.cs"
 -langversion:9.0
 /deterministic
 /optimize+

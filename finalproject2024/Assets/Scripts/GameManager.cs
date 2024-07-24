@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateObjectiveText()
     {
-        objectiveText.text = "Objective: ✅";
+        objectiveText.text = "Objective Complete!";
     }
 
     public void UpdateScoreText()
@@ -76,12 +76,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        Invoke("LoadCurrentLevel", 2f);
+        Invoke("LoadMainMenu", 2f);
     }
 
-    private void LoadCurrentLevel()
+    private void LoadMainMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(0);
     }
 
     public void LoseGame()
